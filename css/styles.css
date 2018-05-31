@@ -229,7 +229,7 @@ nav h1 a {
 #restaurant-name {
   color: #f18200;
   font-family: Arial,sans-serif;
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: 200;
   letter-spacing: 0;
   margin: 10px 0 10px;
@@ -354,4 +354,33 @@ nav h1 a {
 	nav h1 a {
 	  font-size: 1em;
 	  letter-spacing: 1px;
+	}
+
+}
+
+@media screen and (min-width: 350px) {
+
+	body,td,th,p {
+		font-size: 13px;
+	}
+	nav h1 a {
+	  font-size: 1.2em;
+	  letter-spacing: 10px;
+	}
+	nav {
+		height: 100px;
+	}
+	#map {
+		height: 400px;
+	}
+	.inside #map {
+		height: 300px;
+	}
+	.inside #map-container {
+		top: 140px;
+	}
+	#restaurant-container {
+		padding-top: 150px;
+	}
+
 }
