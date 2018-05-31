@@ -117,22 +117,36 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
  * Create review HTML and add it to the webpage.
  */
 createReviewHTML = (review) => {
+    //Create elements needed, set class and values
   const li = document.createElement('li');
-  const name = document.createElement('p');
+  const card = document.createElement('div');
+  card.setAttribute('class', 'review-card');
+  const heading = document.createElement('div');
+  heading.setAttribute('class', 'review-heading');
+  const name = document.createElement('span');
   name.innerHTML = review.name;
-  li.appendChild(name);
-
-  const date = document.createElement('p');
+  name.setAttribute('class', 'review-name');
+  const date = document.createElement('span');
   date.innerHTML = review.date;
-  li.appendChild(date);
-
-  const rating = document.createElement('p');
+  date.setAttribute('class', 'review-date');
+  const body = document.createElement('div');
+  body.setAttribute('class', 'review-body');
+  const rating = document.createElement('div');
   rating.innerHTML = `Rating: ${review.rating}`;
-  li.appendChild(rating);
+  rating.setAttribute('class', 'review-rating');
+  const text = document.createElement('div');
+  text.innerHTML = review.comments;
+  text.setAttribute('class', 'review-text');
 
-  const comments = document.createElement('p');
-  comments.innerHTML = review.comments;
-  li.appendChild(comments);
+  //build html structure
+
+  heading.appendChild(name);
+  heading.appendChild(date);
+  body.appendChild(rating);
+  body.appendChild(text);
+  card.appendChild(heading);
+  card.appendChild(body);
+  li.appendChild(card);
 
   return li;
 }

@@ -262,6 +262,18 @@ nav h1 a {
   padding: 140px 40px 30px;
   width: 100%;
 }
+
+
+#restaurant-hours {
+  width: 100%;
+}
+
+#restaurant-hours td {
+  color: #666;
+}
+
+/* ====================== Review Details ====================== */
+
 #reviews-container {
   padding: 30px 40px 80px;
 }
@@ -276,6 +288,7 @@ nav h1 a {
   margin: 0;
   padding: 0;
 }
+/*TODO check the next 2 here for crossover with custom items*/
 #reviews-list li {
   background-color: #fff;
     border: 2px solid #f3f3f3;
@@ -289,11 +302,40 @@ nav h1 a {
 #reviews-list li p {
   margin: 0 0 10px;
 }
-
-#restaurant-hours {
-  width: 100%;
+/*Custom items for review cards - JS also changed as it builds the relevant HTML*/
+.review-card {
+  background-color: white;
+  border-radius: 15px 0;
 }
-
-#restaurant-hours td {
-  color: #666;
+.review-heading {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 10px;
+  border-top-left-radius: 15px;
+}
+.review-name {
+  width: 50%;
+}
+.review-date {
+  width: 50%;
+  text-align: right;
+  margin:auto;
+  font-size: 0.8em;
+  color: grey;
+}
+.review-body {
+  padding: 10px;
+}
+.review-rating {
+  background-color: orange;
+  width: fit-content;
+  color: white;
+  padding: 5px;
+  margin: 10px 0;
+}
+.review-text {
+	color: grey;
 }
