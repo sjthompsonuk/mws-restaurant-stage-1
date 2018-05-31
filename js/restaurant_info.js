@@ -84,6 +84,7 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
 
     const time = document.createElement('td');
     time.innerHTML = operatingHours[key];
+    time.setAttribute('style', 'text-align:right;');
     row.appendChild(time);
 
     hours.appendChild(row);
