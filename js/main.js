@@ -193,3 +193,11 @@ removeTabs = function() {
 for (i = 1; i < 11; i++) {
     setTimeout(function(){ removeTabs(); }, i * 1000);
 };
+
+// Offline SW reg
+
+if('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js', {
+    scope: '/'
+  });
+}
