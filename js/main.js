@@ -182,7 +182,7 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 }
 
-//Removes Maps API from tab-index
+//Removes Maps API from tab-index and title MAPS iframe - A11y
 
 removeTabs = function() {
     links = document.querySelectorAll('#map a, #map [tabindex], #map button, #map iframe');

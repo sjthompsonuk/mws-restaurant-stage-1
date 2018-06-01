@@ -17,15 +17,15 @@
 
   <main id="maincontent">
     <section id="map-container" tabindex="-1">
-      <div id="map"></div>
+      <div id="map" aria-label="Restaurants displayed in Google Maps"></div>
     </section>
     <section id="restaurant-selection">
       <form class="filter-options">
         <h2>Filter Results</h2>
-        <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
+        <select id="neighborhoods-select" name="neighborhoods" aria-label="select a New York neighborhood" onchange="updateRestaurants()">
           <option value="all">All Areas</option>
         </select>
-        <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
+        <select id="cuisines-select" name="cuisines" aria-label="select a type of cuisine" onchange="updateRestaurants()">
           <option value="all">All Cuisines</option>
         </select>
       </form>

@@ -61,13 +61,17 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   min-height: 100%;
 }
 #footer {
-  background-color: #444;
-  color: #aaa;
+  background-color: #2B2B2B;
+  color: #DBDBDB;
   font-size: 0.8em;
   letter-spacing: 1px;
   padding: 25px;
   text-align: center;
   text-transform: uppercase;
+}
+
+#footer a {
+	color: #FBA332;
 }
 /* ====================== Navigation ====================== */
 nav {
@@ -111,7 +115,7 @@ nav h1 a {
 
 /* Add a color to all links inside the list */
 #breadcrumb li a {
-    color: #0275d8;
+    color: #004F99;
     text-decoration: none;
 }
 
@@ -130,7 +134,7 @@ nav h1 a {
 .filter-options {
   width: 100%;
   height: 80px;
-  background-color: #3397DB;
+  background-color: #252831;
   align-items: center;
   padding-top: 5px;
 }
@@ -190,7 +194,7 @@ nav h1 a {
   max-width: 100%;
 }
 #restaurants-list li h1 {
-  color: #f18200;
+  color: #BA580D;
   font-family: Arial,sans-serif;
   font-size: 1.4em;
   font-weight: 200;
@@ -206,7 +210,7 @@ nav h1 a {
 #restaurants-list a {
   background-color: orange;
   border-bottom: 3px solid #eee;
-  color: #fff;
+  color: black;
   display: inline-block;
   font-size: 1em;
   margin: 15px 0 0;
@@ -230,7 +234,7 @@ nav h1 a {
   top: 100px;
 }
 .inside #map {
-  background-color: #ccc;
+  background-color: #EDEDED;
   width: 100%;
   height: 200px;
 }
@@ -240,7 +244,7 @@ nav h1 a {
   width: 100%;
 }
 #restaurant-name {
-  color: #f18200;
+  color: #A85119;
   font-family: Arial,sans-serif;
   font-size: 1.5em;
   font-weight: 200;
@@ -250,7 +254,7 @@ nav h1 a {
   line-height: 1.1;
 }
 #restaurant-img {
-	background-color: #ccc;
+	background-color: #EDEDED;
     display: block;
     margin: 0;
     max-width: 100%;
@@ -293,7 +297,7 @@ nav h1 a {
   padding: 10px 15px 80px;
 }
 #reviews-container h2 {
-  color: #f58500;
+  color: #BA580D;
   font-size: 2.4em;
   font-weight: 300;
   letter-spacing: -1px;
@@ -305,7 +309,7 @@ nav h1 a {
 }
 /*TODO check the next 2 here for crossover with custom items*/
 #reviews-list li {
-  background-color: #fff;
+  background-color: #EDEDED;
     border: 2px solid #f3f3f3;
   display: block;
   list-style-type: none;
@@ -344,13 +348,13 @@ nav h1 a {
 .review-rating {
   background-color: orange;
   width: fit-content;
-  color: white;
+  color: black;
   padding: 5px;
   margin: 5px 0;
   border-radius: 5px;
 }
 .review-text {
-	color: grey;
+	color: #595959;
 }
 
 /*Media Queries*/
