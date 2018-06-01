@@ -78,9 +78,13 @@ window.initMap = () => {
   self.map = new google.maps.Map(document.getElementById('map'), {
     zoom: 12,
     center: loc,
-    scrollwheel: false
-  });
+    scrollwheel: false,
+    //Added to help reduce focus elements on page
+    disableDefaultUI: true
+});
+
   updateRestaurants();
+
 }
 
 /**
@@ -177,3 +181,15 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     self.markers.push(marker);
   });
 }
+
+//Removes Maps API from tab-index
+
+removeTabs = function() {
+    links = document.querySelectorAll('#map a, #map [tabindex], #map button, #map iframe');
+    links.forEach(function(link) {
+        link.setAttribute('tabIndex', -1);
+    });
+};
+for (i = 1; i < 11; i++) {
+    setTimeout(function(){ removeTabs(); }, i * 1000);
+};

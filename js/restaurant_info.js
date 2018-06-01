@@ -12,7 +12,8 @@ window.initMap = () => {
       self.map = new google.maps.Map(document.getElementById('map'), {
         zoom: 16,
         center: restaurant.latlng,
-        scrollwheel: false
+        scrollwheel: false,
+        disableDefaultUI: true
     });
       fillBreadcrumb();
       DBHelper.mapMarkerForRestaurant(self.restaurant, self.map);
@@ -120,22 +121,22 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
 createReviewHTML = (review) => {
     //Create elements needed, set class and values
   const li = document.createElement('li');
-  const card = document.createElement('div');
+  const card = document.createElement('article');
   card.setAttribute('class', 'review-card');
   const heading = document.createElement('div');
   heading.setAttribute('class', 'review-heading');
-  const name = document.createElement('span');
+  const name = document.createElement('h3');
   name.innerHTML = review.name;
   name.setAttribute('class', 'review-name');
-  const date = document.createElement('span');
+  const date = document.createElement('time');
   date.innerHTML = review.date;
   date.setAttribute('class', 'review-date');
   const body = document.createElement('div');
   body.setAttribute('class', 'review-body');
-  const rating = document.createElement('div');
+  const rating = document.createElement('p');
   rating.innerHTML = `Rating: ${review.rating}`;
   rating.setAttribute('class', 'review-rating');
-  const text = document.createElement('div');
+  const text = document.createElement('p');
   text.innerHTML = review.comments;
   text.setAttribute('class', 'review-text');
 
@@ -177,3 +178,13 @@ getParameterByName = (name, url) => {
     return '';
   return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
+//Removes Maps API from tab-index
+removeTabs = function() {
+    links = document.querySelectorAll('#map a, #map [tabindex], #map button, #map iframe');
+    links.forEach(function(link) {
+        link.setAttribute('tabIndex', -1);
+    });
+};
+for (i = 1; i < 11; i++) {
+    setTimeout(function(){ removeTabs(); }, i * 1000);
+};

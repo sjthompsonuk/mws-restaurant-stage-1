@@ -158,6 +158,12 @@ nav h1 a {
 	padding-right: 5px;
 }
 
+#cuisines-select:focus,
+#neighborhoods-select:focus {
+	color: orange;
+	box-shadow: 0 0 2px 5px orange;
+}
+
 /* ====================== Restaurant Listing ====================== */
 #restaurants-list {
   background-color: #f3f3f3;
@@ -197,7 +203,7 @@ nav h1 a {
   margin: 0;
   font-size: 1.1em;
 }
-#restaurants-list li a {
+#restaurants-list a {
   background-color: orange;
   border-bottom: 3px solid #eee;
   color: #fff;
